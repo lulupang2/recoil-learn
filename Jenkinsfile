@@ -4,6 +4,8 @@ pipeline {
         stage("Build") {
             steps {
                 sh "pwd"
+                sh "whoami"
+                sh "node -v"
                 sh "yarn install"
                 sh "CI=false yarn build"
             }
