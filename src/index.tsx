@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './resources/color.scss';
+import './resources/index.scss';
+
+import { RecoilRoot } from 'recoil';
+import Todo from './pages/Todo';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StrictMode>
+    <RecoilRoot>
+      <Router>
+        <Todo />
+      </Router>
+    </RecoilRoot>
+  </StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
