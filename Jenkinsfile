@@ -3,8 +3,7 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                sh "pwd"
-                sh "which yarn"
+                sh "nvm install latest"
                 sh "yarn"
                 sh "CI=false yarn build"
             }
