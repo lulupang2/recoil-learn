@@ -3,8 +3,7 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                sh"pwd"
-                sh"npm version"
+                sh "pwd"
                 sh "yarn install"
                 sh "CI=false yarn build"
             }
