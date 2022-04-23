@@ -5,9 +5,8 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "which yarn"
-                //sh "/home/ubuntu/.nvm/versions/node/v17.9.0/bin/yarn"
-                sh "/usr/local/bin/yarn"
-                sh "CI=false /usr/local/bin/yarn build"
+                sh "yarn"
+                sh "CI=false yarn build"
             }
         }
         stage("Deploy") {
