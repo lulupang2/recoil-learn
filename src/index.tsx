@@ -6,12 +6,13 @@ import './resources/index.scss';
 
 import { RecoilRoot } from 'recoil';
 import Todo from './pages/Todo';
+import App from './App';
 
 ReactDOM.render(
   <StrictMode>
     <RecoilRoot>
       <Router>
-        <Todo />
+        <App />
       </Router>
     </RecoilRoot>
   </StrictMode>,
